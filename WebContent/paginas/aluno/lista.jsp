@@ -49,8 +49,12 @@
    		</div>
     </c:if>
 	<div class="row">
-		<div class="col-md-11">
+		<div class="col-md-9">
 			<h1>Lista de Aluno</h1>
+		</div>
+		<div class="col-md-2 form-group">
+			<br clear="all"/>
+			<a target="_blank" href="${pageContext.request.contextPath}/aluno/relatorio"><button class="btn btn-primary">Gerar Relatório</button></a>
 		</div>
 		<div class="col-md-1 form-group">
 			<br clear="all"/>
@@ -116,7 +120,7 @@
 		      width: 'auto', resizable: false,
 		      buttons: {
 		          Sim: function () {
-		              window.location = base + "/aluno/remover?id="+idAluno;
+		              window.location = base + "/paginas/aluno/actions.jsp?action=REMOVER&id="+idAluno;
 		              $(this).dialog("close");
 		          },
 		          Não: function () {
